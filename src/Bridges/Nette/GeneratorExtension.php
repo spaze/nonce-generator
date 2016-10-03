@@ -16,4 +16,23 @@ class GeneratorExtension extends \Nette\DI\CompilerExtension
 			->setClass('Spaze\NonceGenerator\Generator');
 	}
 
+
+	public function beforeCompile()
+	{
+		$builder = $this->getContainerBuilder();
+
+		$register = function (\Nette\DI\ServiceDefinition $service) {
+			$service->addSetup('addProvider', ['nonceGenerator', $this->prefix('@generator')]);
+		};
+
+		$latteFactoryService = $builder->getByType(\Nette\Bridges\ApplicationLatte\ILatteFactory::class) ?: 'nette.latteFactory';
+		if ($builder->hasDefinition($latteFactoryService)) {
+			$register($builder->getDefinition($latteFactoryService));
+		}
+
+		if ($builder->hasDefinition('nette.latte')) {
+			$register($builder->getDefinition('nette.latte'));
+		}
+	}
+
 }
