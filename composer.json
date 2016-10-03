@@ -1,0 +1,20 @@
+{
+	"name": "spaze/nonce-generator",
+	"description": "Content Security Policy nonce generator",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Michal Špaček",
+			"homepage": "https://www.michalspacek.cz",
+			"email": "mail@michalspacek.cz"
+		}
+	],
+	"autoload": {
+		"psr-4": {"Spaze\\NonceGenerator\\": "src"}
+	},
+	"suggest": {
+		"spaze/csp-config": "Build and send Content Security Policy header, possibly including nonce, if enabled",
+		"spaze/sri-macros": "For script tags with automatically added Content Security Policy nonces, and Subresource Integrity hashes, too",
+		"paragonie/random_compat": "PHP 5.x polyfill for random_bytes() used by this library"
+	}
+}
