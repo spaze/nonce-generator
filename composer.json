@@ -14,7 +14,8 @@
 	},
 	"require-dev": {
 		"nette/tester": "^1.7",
-		"paragonie/random_compat": "^2.0"
+		"paragonie/random_compat": "^2.0",
+		"phpstan/phpstan": "^0.6.4"
 	},
 	"suggest": {
 		"spaze/csp-config": "Build and send Content Security Policy header, possibly including nonce, if enabled",

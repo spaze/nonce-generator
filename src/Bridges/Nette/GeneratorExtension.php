@@ -25,7 +25,7 @@ class GeneratorExtension extends \Nette\DI\CompilerExtension
 			$service->addSetup('addProvider', ['nonceGenerator', $this->prefix('@generator')]);
 		};
 
-		$latteFactoryService = $builder->getByType(\Nette\Bridges\ApplicationLatte\ILatteFactory::class) ?: 'nette.latteFactory';
+		$latteFactoryService = $builder->getByType('\Nette\Bridges\ApplicationLatte\ILatteFactory') ?: 'nette.latteFactory';
 		if ($builder->hasDefinition($latteFactoryService)) {
 			$register($builder->getDefinition($latteFactoryService));
 		}
