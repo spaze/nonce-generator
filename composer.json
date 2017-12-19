@@ -16,7 +16,7 @@
 		"psr-4": {"Spaze\\NonceGenerator\\": "src"}
 	},
 	"require-dev": {
-		"nette/tester": "^1.7",
+		"nette/tester": "^2.0",
 		"paragonie/random_compat": "^2.0",
 		"phpstan/phpstan": "^0.6.4"
 	},
