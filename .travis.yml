@@ -17,6 +17,7 @@ install:
   - composer install --no-interaction --prefer-source
 
 script:
+  - ./vendor/bin/phpstan analyse -c phpstan.neon ./src/
   - ./vendor/bin/tester -p $TESTER_PHP_BIN -c tests/php-unix.ini -s ./tests/
 
 after_failure:
