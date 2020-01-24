@@ -1,19 +1,15 @@
 <?php
+declare(strict_types = 1);
 
-/**
- * Test: Spaze\NonceGenerator\Generator.
- *
- * @testCase Spaze\NonceGenerator\GeneratorTest
- * @author Michal Špaček
- * @package Spaze\NonceGenerator\Generator
- */
+namespace Spaze\NonceGenerator;
 
 use Spaze\NonceGenerator\Generator;
 use Tester\Assert;
+use Tester\TestCase;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-class GeneratorTest extends Tester\TestCase
+class GeneratorTest extends TestCase
 {
 
 	public function testGetDefaultKey()
