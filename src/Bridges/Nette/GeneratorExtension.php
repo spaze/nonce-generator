@@ -29,11 +29,15 @@ class GeneratorExtension extends CompilerExtension
 		// A string is used in getByType() instead of ::class so we don't need to depend on nette/application
 		$latteFactoryService = $builder->getByType('\Nette\Bridges\ApplicationLatte\ILatteFactory') ?: 'nette.latteFactory';
 		if ($builder->hasDefinition($latteFactoryService)) {
-			$register($builder->getDefinition($latteFactoryService));
+			/** @var FactoryDefinition $definition */
+			$definition = $builder->getDefinition($latteFactoryService);
+			$register($definition);
 		}
 
 		if ($builder->hasDefinition('nette.latte')) {
-			$register($builder->getDefinition('nette.latte'));
+			/** @var FactoryDefinition $definition */
+			$definition = $builder->getDefinition('nette.latte');
+			$register($definition);
 		}
 	}
 
