@@ -1,4 +1,4 @@
 parameters:
-	autoload_directories:
+	paths:
 		- src
 	level: max
