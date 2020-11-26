@@ -26,7 +26,7 @@ composer require spaze/nonce-generator
 
 ## Requirements
 
-- PHP 7 or [paragonie/random_compat](https://github.com/paragonie/random_compat) for `random_bytes()`
+- PHP 7.1 or newer
 
 ## API
 
