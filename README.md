@@ -1,6 +1,6 @@
 # Nonce Generator
 
-[![Build Status](https://travis-ci.org/spaze/nonce-generator.svg?branch=master)](https://travis-ci.org/spaze/nonce-generator)
+[![PHP Tests](https://github.com/spaze/nonce-generator/workflows/PHP%20Tests/badge.svg)](https://github.com/spaze/nonce-generator/actions?query=workflow%3A%22PHP+Tests%22)
 
 This generates random nonces for Content Security Policy *nonce* attributes. These nonces work with CSP3 [`strict-dynamic`](https://w3c.github.io/webappsec-csp/#strict-dynamic-usage) which aims to make Content Security Policy simpler to deploy for existing applications. This package is intended to be used with [`spaze/csp-config`](https://github.com/spaze/csp-config) and [`spaze/sri-macros`](https://github.com/spaze/sri-macros).
 
