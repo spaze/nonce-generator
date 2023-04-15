@@ -5,9 +5,11 @@ namespace Spaze\NonceGenerator;
 
 use Spaze\NonceGenerator\Generator;
 use Tester\Assert;
+use Tester\Environment;
 use Tester\TestCase;
 
 require __DIR__ . '/../vendor/autoload.php';
+Environment::setup();
 
 class GeneratorTest extends TestCase
 {
