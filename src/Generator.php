@@ -23,7 +23,7 @@ class Generator
 
 	public function createNonce(): Nonce
 	{
-		return new Nonce(\base64_encode(\random_bytes(16)));
+		return new Nonce(\base64_encode(\random_bytes(18)));
 	}
 
 }
